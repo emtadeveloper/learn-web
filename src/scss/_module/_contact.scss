@@ -19,7 +19,6 @@
     }
   }
   .social-media {
-    position: relative;
     direction: ltr;
     @include flex-center-vert;
     height: $height-contact;
@@ -28,7 +27,7 @@
       width: 2.5rem;
     }
     a {
-      @include font-style(null, $color-light-text, null, center);
+      @include font-style(null, $color-light-text, null, center,null);
       width: 2.5rem;
       &:nth-child(1) {
         margin-left: $margin-right-left-container;
