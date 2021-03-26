@@ -1,0 +1,124 @@
+@import "../tools/variables.scss";
+
+.nav {
+  background-color: $gray;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  div {
+    @include flex-center-vert;
+    @include max-box(100%, 100%);
+    div.underline {
+      @extend .hover-focus-underline;
+      right: 0;
+      width: 7.5rem;
+    }
+    a.brand {
+      @include font-style(2.6rem, null, null, null, 2.5rem);
+      i {
+        color: orange;
+      }
+    }
+    a.icon {
+      @include abs-position(0, null, null, 0);
+      @include font-style(1.25rem, null, null, null, 3.1rem);
+    }
+    a {
+      @include font-style(1rem, $color-dark-text, null, center, null);
+      padding: 1.25rem 1rem;
+      &:nth-child(2) {
+        padding-right: 0 !important;
+      }
+      &:nth-child(3):focus ~ div.underline {
+        width: 9.37rem;
+        right: 7.5rem;
+      }
+      &:nth-child(4):focus ~ div.underline {
+        right: 17rem;
+        width: 5.6rem;
+      }
+      &:nth-child(5):focus ~ div.underline {
+        width: 5rem;
+        right: 22rem;
+      }
+      &:nth-child(6):focus ~ div.underline {
+        width: 5rem;
+        right: 26.5rem;
+      }
+    }
+    div {
+      max-width: 40%;
+      position: absolute;
+      left: $margin-right-left-container;
+      direction: ltr;
+      a.btn {
+        @include font-style(0.81rem, $color-light-text, null, null, null);
+        margin-right: $margin-right-left-container;
+        padding: 0.62rem 1.87rem;
+        cursor: pointer;
+        border-radius: 5px;
+        background: $light-green;
+        transition: 0.3s;
+        i {
+          margin-right: 0.5rem;
+          vertical-align: -1px;
+        }
+      }
+
+      a.btn-login {
+        @include font-style(0.81rem, $color-light-text, null, null, null);
+        padding: 10px 16px !important;
+        cursor: pointer;
+        border-radius: 5px;
+        background: $orange;
+        transition: 0.3s;
+        &:active {
+          transform: scale3d(1.2, 1.2, 1.2);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $md-width) {
+  .nav {
+    div {
+      @include flex-center-column;
+      width: 100%;
+      .responsive-a {
+        margin: 0 $margin-right-left-container;
+      }
+      a.brand {
+        padding-right: $margin-right-left-container;
+      }
+      a {
+        padding: 0.31rem;
+        &:nth-child(1) {
+          display: block !important;
+          width: 100%;
+          @include font-style(null, $orange !important, null, right, null);
+        }
+
+        &:not(.responsive-a) {
+          background: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+  }
+  .nav.responsive {
+    div {
+      a {
+        &:not(.responsive-a) {
+          width: 100%;
+          line-height: 50px;
+          display: block !important;
+        }
+        &:not(.responsive-a):hover {
+          background-color: $orange;
+          color: $color-light-text;
+        }
+      }
+    }
+  }
+}

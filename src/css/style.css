@@ -386,7 +386,7 @@ body {
   .col-xl-offset-12 {
     margin-right: 100.0% !important; } }
 
-.hover-focus-underline, .container-fluid-custom .social-media div.underline {
+.hover-focus-underline, .container-fluid-custom .social-media div.underline, .nav div div.underline {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -395,10 +395,20 @@ body {
   height: 0.17rem;
   transition: 0.5s; }
 
+.btn {
+  font-size: 0.81rem;
+  color: #fff;
+  padding: 10px 16px !important;
+  cursor: pointer;
+  border-radius: 5px;
+  background: orange;
+  transition: 0.3s; }
+
 .container-fluid-custom {
   background-color: #041121; }
   .container-fluid-custom .contact {
     display: flex;
+    flex-direction: row !important;
     align-items: center;
     height: 3.1rem; }
     .container-fluid-custom .contact a {
@@ -409,9 +419,9 @@ body {
       margin-right: 0.7rem;
       margin-left: 2rem; }
   .container-fluid-custom .social-media {
-    position: relative;
     direction: ltr;
     display: flex;
+    flex-direction: row !important;
     align-items: center;
     height: 3.1rem; }
     .container-fluid-custom .social-media div.underline {
@@ -437,3 +447,104 @@ body {
       .container-fluid-custom .social-media a:nth-child(5):hover ~ div.underline {
         display: inline-block;
         left: 11rem; }
+
+.nav {
+  background-color: #c8d6e5;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 999; }
+  .nav div {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%; }
+    .nav div div.underline {
+      right: 0;
+      width: 7.5rem; }
+    .nav div a.brand {
+      font-size: 2.6rem;
+      line-height: 2.5rem; }
+      .nav div a.brand i {
+        color: orange; }
+    .nav div a.icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 1.25rem;
+      line-height: 3.1rem; }
+    .nav div a {
+      font-size: 1rem;
+      color: #2e2e2e;
+      text-align: center;
+      padding: 1.25rem 1rem; }
+      .nav div a:nth-child(2) {
+        padding-right: 0 !important; }
+      .nav div a:nth-child(3):focus ~ div.underline {
+        width: 9.37rem;
+        right: 7.5rem; }
+      .nav div a:nth-child(4):focus ~ div.underline {
+        right: 17rem;
+        width: 5.6rem; }
+      .nav div a:nth-child(5):focus ~ div.underline {
+        width: 5rem;
+        right: 22rem; }
+      .nav div a:nth-child(6):focus ~ div.underline {
+        width: 5rem;
+        right: 26.5rem; }
+    .nav div div {
+      max-width: 40%;
+      position: absolute;
+      left: 1rem;
+      direction: ltr; }
+      .nav div div a.btn {
+        font-size: 0.81rem;
+        color: #fff;
+        margin-right: 1rem;
+        padding: 0.62rem 1.87rem;
+        cursor: pointer;
+        border-radius: 5px;
+        background: rgba(46, 204, 113, 0.5);
+        transition: 0.3s; }
+        .nav div div a.btn i {
+          margin-right: 0.5rem;
+          vertical-align: -1px; }
+      .nav div div a.btn-login {
+        font-size: 0.81rem;
+        color: #fff;
+        padding: 10px 16px !important;
+        cursor: pointer;
+        border-radius: 5px;
+        background: orange;
+        transition: 0.3s; }
+        .nav div div a.btn-login:active {
+          transform: scale3d(1.2, 1.2, 1.2); }
+
+@media screen and (max-width: 768px) {
+  .nav div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column !important;
+    width: 100%; }
+    .nav div .responsive-a {
+      margin: 0 1rem; }
+    .nav div a.brand {
+      padding-right: 1rem; }
+    .nav div a {
+      padding: 0.31rem; }
+      .nav div a:nth-child(1) {
+        display: block !important;
+        width: 100%;
+        color: orange !important;
+        text-align: right; }
+      .nav div a:not(.responsive-a) {
+        background: rgba(255, 255, 255, 0.5); }
+  .nav.responsive div a:not(.responsive-a) {
+    width: 100%;
+    line-height: 50px;
+    display: block !important; }
+  .nav.responsive div a:not(.responsive-a):hover {
+    background-color: orange;
+    color: #fff; } }
