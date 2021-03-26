@@ -1,0 +1,10 @@
+// border for hover and foucs for _navBar and _contact
+
+.hover-focus-underline {
+    @include abs-position(null, null, 0, 0);
+    background-color: orange;
+    display: none;
+    height: 0.17rem;
+    transition: 0.5s;
+  }
+  //=====================================================
