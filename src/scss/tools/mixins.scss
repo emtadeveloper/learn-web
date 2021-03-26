@@ -15,11 +15,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column!important;
 }
 
 @mixin flex-center-vert {
   display: flex;
+  flex-direction: row!important;
   align-items: center;
 }
 
@@ -62,11 +63,18 @@
 
 // fonts and  styles ============================
 
-@mixin font-style($fontSize, $fontColor, $fontWeight, $text-align) {
+@mixin font-style(
+  $fontSize,
+  $fontColor,
+  $fontWeight,
+  $text-align,
+  $lineheight
+) {
   font-size: $fontSize;
   color: $fontColor;
   font-weight: $fontWeight;
   text-align: $text-align;
+  line-height: $lineheight;
 }
 
 // ==============================================
@@ -79,6 +87,23 @@
   right: $right;
   bottom: $bottom;
   left: $left;
+}
+
+// ==============================================
+
+// box  =========================================
+
+@mixin full-box($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin max-box($width, $height) {
+  max-width: $width;
+  max-height: $height;
+}
+@mixin min-box($width, $height) {
+  min-width: $width;
+  min-height: $height;
 }
 
 // ==============================================

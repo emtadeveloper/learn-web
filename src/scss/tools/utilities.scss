@@ -1,10 +1,20 @@
 // border for hover and foucs for _navBar and _contact
+@import "./variables.scss";
 
 .hover-focus-underline {
-    @include abs-position(null, null, 0, 0);
-    background-color: orange;
-    display: none;
-    height: 0.17rem;
-    transition: 0.5s;
-  }
-  //=====================================================
+  @include abs-position(null, null, 0, 0);
+  background-color: orange;
+  display: none;
+  height: 0.17rem;
+  transition: 0.5s;
+}
+//=====================================================
+
+.btn {
+  @include font-style(0.81rem, $color-light-text, null, null,null);
+  padding: 10px 16px !important;
+  cursor: pointer;
+  border-radius: 5px;
+  background: $orange;
+  transition: 0.3s;
+}
