@@ -52,6 +52,12 @@ This set of fonts are used in this project under the license: (.....)
   src: url("../fonts/eot/IRANSansWeb.eot");
   src: url("../fonts/eot/IRANSansWeb.eot?#iefix") format("embedded-opentype"), url("../fonts/woff2/IRANSansWeb.woff2") format("woff2"), url("../fonts/woff/IRANSansWeb.woff") format("woff"), url("../fonts/ttf/IRANSansWeb.ttf") format("truetype"); }
 
+@font-face {
+  font-family: Yekan;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Yekan.ttf") format("truetype"); }
+
 *,
 body {
   margin: 0;
@@ -75,23 +81,6 @@ body {
   * figure,
   body figure {
     position: relative; }
-  * h1,
-  * h2,
-  * h3,
-  * h4,
-  * h5,
-  * h6,
-  * input,
-  * textarea,
-  body h1,
-  body h2,
-  body h3,
-  body h4,
-  body h5,
-  body h6,
-  body input,
-  body textarea {
-    font-family: IRANSans !important; }
 
 .container-fluid {
   width: 100%; }
@@ -404,7 +393,11 @@ body {
   padding: 0.55rem 0.75rem;
   border-radius: 3px;
   outline: none;
+  cursor: pointer;
   transition: 0.4s; }
+
+.none {
+  display: none; }
 
 .container-fluid-custom {
   background-color: #041121; }
@@ -540,9 +533,10 @@ body {
     color: #fff; } }
 
 .custom-container-header {
-  max-height: 80vh;
+  max-height: 100vh;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  z-index: 999; }
   .custom-container-header .slideshow-container {
     margin: 5% 0; }
     .custom-container-header .slideshow-container .mySlides {
@@ -611,7 +605,7 @@ body {
       float: left;
       width: 6.25rem;
       margin-left: 2rem;
-      margin-top: 1.5rem; }
+      margin: 1.5rem  2rem; }
       .custom-container-header .slideshow-container .angle a {
         cursor: pointer;
         width: 2.5rem;
@@ -657,3 +651,72 @@ body {
         font-size: 0.9rem !important;
         color: #6f6d6d;
         vertical-align: -3px !important; } }
+
+.container-custom-cary {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../image/faq-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .container-custom-cary section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center; }
+    .container-custom-cary section h3 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      margin-bottom: 3rem; }
+    .container-custom-cary section .input-field-search {
+      width: 50%;
+      height: 3.8rem;
+      display: flex;
+      align-items: center;
+      background-color: #e9e2e2;
+      border-radius: 100px; }
+      .container-custom-cary section .input-field-search input {
+        outline: 0;
+        border: 0;
+        background-color: #e9e2e2;
+        width: 90%;
+        padding-right: 50px;
+        text-align: right;
+        font-size: 1rem; }
+      .container-custom-cary section .input-field-search i {
+        width: 10%;
+        text-align: center;
+        cursor: pointer;
+        color: #8f8a8a; }
+
+@media screen and (max-width: 1000px) {
+  section h3 {
+    width: 90%;
+    text-align: center;
+    font-size: 1.2rem !important; }
+  section .input-field-search {
+    width: 90% !important; }
+    section .input-field-search input {
+      width: 85% !important;
+      padding-right: 25px !important; }
+    section .input-field-search i {
+      width: 15% !important; } }
+
+.container-custom-counter {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: row !important;
+  align-items: center !important;
+  margin: 10% 0;
+  flex-wrap: wrap; }
+  .container-custom-counter .wrapper {
+    padding: 1rem;
+    text-align: center; }
+    .container-custom-counter .wrapper h2 {
+      font-family: "Yekan";
+      font-weight: normal; }
+    .container-custom-counter .wrapper h1 {
+      margin-top: 1.3rem;
+      font-size: 1.2rem;
+      font-weight: normal; }
