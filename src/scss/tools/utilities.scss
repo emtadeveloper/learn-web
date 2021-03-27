@@ -10,11 +10,17 @@
 }
 //=====================================================
 
+.img-fluid {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .btn {
-  @include font-style(0.81rem, $color-light-text, null, null,null);
-  padding: 10px 16px !important;
-  cursor: pointer;
-  border-radius: 5px;
-  background: $orange;
-  transition: 0.3s;
+  @include font-style(.8rem, $color-light-text, null, null, null);
+  background-color: $orange;
+  padding: 0.55rem 0.75rem;
+  border-radius: 3px;
+  outline: none;
+  transition: 0.4s;
 }
