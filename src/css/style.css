@@ -399,6 +399,21 @@ body {
 .none {
   display: none; }
 
+.title-container {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .title-container h6 {
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    font-weight: normal; }
+  .title-container span {
+    width: 60px;
+    height: 3px;
+    background-color: orange; }
+
 .container-fluid-custom {
   background-color: #041121; }
   .container-fluid-custom .contact {
@@ -485,9 +500,6 @@ body {
       .nav div a:nth-child(5):focus ~ div.underline {
         width: 5rem;
         right: 25.5rem; }
-      .nav div a:nth-child(6):focus ~ div.underline {
-        width: 5rem;
-        right: 31.25rem; }
     .nav div div {
       max-width: 40%;
       position: absolute;
@@ -704,7 +716,7 @@ body {
       width: 15% !important; } }
 
 .container-custom-counter {
-  min-height: 60vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: row !important;
   align-items: center !important;
@@ -720,3 +732,102 @@ body {
       margin-top: 1.3rem;
       font-size: 1.2rem;
       font-weight: normal; }
+
+.container-custom-subjects {
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .container-custom-subjects div.subjects {
+    padding: 1rem;
+    margin: 0.7rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    background-color: #fbf9f9; }
+    .container-custom-subjects div.subjects:active {
+      border: 2px solid orange; }
+    .container-custom-subjects div.subjects h2 {
+      border-bottom: 1px solid #fbf9f9;
+      padding: 1rem 0;
+      font-size: 1rem;
+      color: #272626;
+      font-weight: normal; }
+    .container-custom-subjects div.subjects p {
+      font-size: 0.75rem;
+      color: #2e2e2e;
+      text-align: justify; }
+    .container-custom-subjects div.subjects div.price {
+      display: flex;
+      color: #259956;
+      width: 100%;
+      justify-content: flex-end;
+      align-items: center; }
+      .container-custom-subjects div.subjects div.price h4 {
+        margin-top: 0.5rem;
+        margin-left: 4px;
+        font-weight: normal;
+        text-align: left; }
+      .container-custom-subjects div.subjects div.price h3 {
+        font-weight: normal;
+        font-family: "Yekan" !important; }
+    .container-custom-subjects div.subjects div.icon-container {
+      display: flex;
+      margin-top: 1.5rem;
+      align-items: center;
+      justify-content: space-between; }
+      .container-custom-subjects div.subjects div.icon-container i {
+        display: flex;
+        align-items: center;
+        color: orange; }
+        .container-custom-subjects div.subjects div.icon-container i h5 {
+          margin-right: 0.3rem;
+          color: #2e2e2e; }
+      .container-custom-subjects div.subjects div.icon-container div {
+        display: flex; }
+        .container-custom-subjects div.subjects div.icon-container div i:nth-child(1) {
+          margin-left: 1rem;
+          color: #041121; }
+        .container-custom-subjects div.subjects div.icon-container div i:nth-child(2) {
+          color: red; }
+
+h2.title {
+  margin: 5rem 0;
+  color: #2e2e2e; }
+  h2.title::after {
+    content: "";
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    width: 80%;
+    height: 3px;
+    background: orange; }
+
+.all-subjects {
+  font-size: 16px;
+  text-align: left;
+  font-weight: normal;
+  cursor: pointer;
+  margin-bottom: 1rem; }
+  .all-subjects i {
+    font-size: 24px;
+    color: orange;
+    margin: 1rem;
+    vertical-align: -6px; }
+
+@media screen and (max-width: 2000px) {
+  div.subjects {
+    width: 20%; } }
+
+@media screen and (max-width: 992px) {
+  div.subjects {
+    width: 30%; } }
+
+@media screen and (max-width: 768px) {
+  div.subjects {
+    width: 45%; } }
+
+@media screen and (max-width: 600px) {
+  div.subjects {
+    width: 88%; } }
