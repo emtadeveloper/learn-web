@@ -1,18 +1,18 @@
 @import "../tools/variables.scss";
 
 .nav {
-  background-color: $gray;
+  background-color: $light-gray;
   overflow: hidden;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 9999;
   div {
     @include flex-center-vert;
     @include max-box(100%, 100%);
     div.underline {
       @extend .hover-focus-underline;
-      right: 0;
-      width: 7.5rem;
+      right: 1.5rem;
+      width: 8.5rem;
     }
     a.brand {
       @include font-style(2.6rem, null, null, null, 2.5rem);
@@ -24,27 +24,28 @@
       @include abs-position(0, null, null, 0);
       @include font-style(1.25rem, null, null, null, 3.1rem);
     }
+    a.home {
+      padding-right: 0 !important;
+    }
     a {
       @include font-style(1rem, $color-dark-text, null, center, null);
-      padding: 1.25rem 1rem;
-      &:nth-child(2) {
-        padding-right: 0 !important;
-      }
+      padding: 0.9rem 1.5rem;
+
       &:nth-child(3):focus ~ div.underline {
         width: 9.37rem;
-        right: 7.5rem;
+        right: 9.5rem;
       }
       &:nth-child(4):focus ~ div.underline {
-        right: 17rem;
-        width: 5.6rem;
+        right: 19.8rem;
+        width: 5rem;
       }
       &:nth-child(5):focus ~ div.underline {
         width: 5rem;
-        right: 22rem;
+        right: 25.5rem;
       }
       &:nth-child(6):focus ~ div.underline {
         width: 5rem;
-        right: 26.5rem;
+        right: 31.25rem;
       }
     }
     div {
@@ -53,26 +54,18 @@
       left: $margin-right-left-container;
       direction: ltr;
       a.btn {
-        @include font-style(0.81rem, $color-light-text, null, null, null);
+        @extend .btn;
         margin-right: $margin-right-left-container;
-        padding: 0.62rem 1.87rem;
-        cursor: pointer;
-        border-radius: 5px;
         background: $light-green;
-        transition: 0.3s;
         i {
           margin-right: 0.5rem;
           vertical-align: -1px;
         }
       }
-
       a.btn-login {
-        @include font-style(0.81rem, $color-light-text, null, null, null);
-        padding: 10px 16px !important;
-        cursor: pointer;
-        border-radius: 5px;
+        @extend .btn;
+        text-align: center;
         background: $orange;
-        transition: 0.3s;
         &:active {
           transform: scale3d(1.2, 1.2, 1.2);
         }
