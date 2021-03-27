@@ -1,0 +1,19 @@
+.container-custom-counter {
+  min-height: 60vh;
+  @include flex-center-vert;
+  margin: 10% 0;
+  flex-wrap: wrap;
+  .wrapper {
+    padding: 1rem;
+    text-align: center;
+    h2 {
+      font-family: "Yekan";
+      font-weight: normal;
+    }
+    h1 {
+      margin-top: 1.3rem;
+      font-size: 1.2rem;
+      font-weight: normal;
+    }
+  }
+}

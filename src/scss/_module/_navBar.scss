@@ -64,6 +64,7 @@
       }
       a.btn-login {
         @extend .btn;
+        
         text-align: center;
         background: $orange;
         &:active {

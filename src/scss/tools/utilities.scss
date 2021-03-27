@@ -17,10 +17,15 @@
 }
 
 .btn {
-  @include font-style(.8rem, $color-light-text, null, null, null);
+  @include font-style(0.8rem, $color-light-text, null, null, null);
   background-color: $orange;
   padding: 0.55rem 0.75rem;
   border-radius: 3px;
   outline: none;
+  cursor: pointer;
   transition: 0.4s;
+}
+
+.none {
+  display: none;
 }

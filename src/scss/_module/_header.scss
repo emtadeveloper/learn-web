@@ -1,6 +1,7 @@
 .custom-container-header {
-  @include max-box(null, 80vh);
+  @include max-box(null,100vh);
   @include flex-center-horiz;
+  z-index: 999;
   .slideshow-container {
     margin: 5% 0;
     .mySlides {
@@ -70,7 +71,7 @@
       float: left;
       width: 6.25rem;
       margin-left: 2rem;
-      margin-top: 1.5rem;
+      margin: 1.5rem  2rem;
       a {
         cursor: pointer;
         @include full-box(2.5rem, 2.5rem);
