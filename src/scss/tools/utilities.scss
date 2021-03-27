@@ -29,3 +29,21 @@
 .none {
   display: none;
 }
+
+.title-container {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h6 {
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    font-weight: normal;
+  }
+  span {
+    width:60px;
+    height: 3px;
+    background-color: $orange;
+  }
+}

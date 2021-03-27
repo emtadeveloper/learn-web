@@ -1,0 +1,117 @@
+.container-custom-subjects {
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  div.subjects {
+    padding: 1rem;
+    margin: 0.7rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    background-color: $light-gray;
+    &:active {
+      border: 2px solid $orange;
+    }
+    h2 {
+      border-bottom: 1px solid $light-gray;
+      padding: 1rem 0;
+      @include font-style(1rem, rgb(39, 38, 38), normal, null, null);
+    }
+    p {
+      @include font-style(0.75rem, $color-dark-text, null, justify, null);
+    }
+    div.price {
+      display: flex;
+      color: #259956;
+      width: 100%;
+      justify-content: flex-end;
+      align-items: center;
+      h4 {
+        margin-top: 0.5rem;
+        margin-left: 4px;
+        font-weight: normal;
+        text-align: left;
+      }
+      h3 {
+        font-weight: normal;
+        font-family: "Yekan" !important;
+      }
+    }
+    div.icon-container {
+      display: flex;
+      margin-top: 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+      i {
+        display: flex;
+        align-items: center;
+        color: $orange;
+        h5 {
+          margin-right: 0.3rem;
+          color: $color-dark-text;
+        }
+      }
+      div {
+        display: flex;
+        i {
+          &:nth-child(1) {
+            margin-left: 1rem;
+            color: $fluid-custom-color;
+          }
+          &:nth-child(2) {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}
+h2.title {
+  margin: 5rem 0;
+  color: $color-dark-text;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    width: 80%;
+    height: 3px;
+    background: $orange;
+  }
+}
+.all-subjects {
+  font-size: 16px;
+  text-align: left;
+  font-weight: normal;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  i {
+    font-size: 24px;
+    color: $orange;
+    margin: 1rem;
+    vertical-align: -6px;
+  }
+}
+
+@media screen and(max-width:2000px) {
+  div.subjects {
+    width: 20%;
+  }
+}
+@media screen and(max-width:$l-width) {
+  div.subjects {
+    width:30%;
+  }
+}
+@media screen and(max-width:$md-width) {
+  div.subjects {
+    width: 45%;
+  }
+}
+@media screen and(max-width:$xs-width) {
+  div.subjects {
+    width: 88%;
+  }
+}
