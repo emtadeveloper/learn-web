@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="fa")
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -12,6 +12,11 @@ html(lang="en")
         include _module/_contact.pug 
         include _module/_navBar.pug 
         include _module/_header.pug 
-    script(src="../js/index.js")     
+        include _module/_cray.pug 
+        include _module/_counter.pug 
+    script(src="../js/index.js")
+    script  VanillaCounter()
+            
+
 
 
