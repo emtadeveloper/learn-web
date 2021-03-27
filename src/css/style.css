@@ -92,9 +92,6 @@ body {
   body input,
   body textarea {
     font-family: IRANSans !important; }
-  * h1,
-  body h1 {
-    font-weight: bold; }
 
 .container-fluid {
   width: 100%; }
@@ -395,21 +392,26 @@ body {
   height: 0.17rem;
   transition: 0.5s; }
 
-.btn {
-  font-size: 0.81rem;
+.img-fluid {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.btn, .nav div div a.btn, .nav div div a.btn-login, .custom-container-header .slideshow-container .mySlides .header-title a {
+  font-size: 0.8rem;
   color: #fff;
-  padding: 10px 16px !important;
-  cursor: pointer;
-  border-radius: 5px;
-  background: orange;
-  transition: 0.3s; }
+  background-color: orange;
+  padding: 0.55rem 0.75rem;
+  border-radius: 3px;
+  outline: none;
+  transition: 0.4s; }
 
 .container-fluid-custom {
   background-color: #041121; }
   .container-fluid-custom .contact {
     display: flex;
     flex-direction: row !important;
-    align-items: center;
+    align-items: center !important;
     height: 3.1rem; }
     .container-fluid-custom .contact a {
       margin-right: 1rem;
@@ -422,7 +424,7 @@ body {
     direction: ltr;
     display: flex;
     flex-direction: row !important;
-    align-items: center;
+    align-items: center !important;
     height: 3.1rem; }
     .container-fluid-custom .social-media div.underline {
       width: 2.5rem; }
@@ -449,20 +451,20 @@ body {
         left: 11rem; }
 
 .nav {
-  background-color: #c8d6e5;
+  background-color: #fbf9f9;
   overflow: hidden;
   position: sticky;
   top: 0;
-  z-index: 999; }
+  z-index: 9999; }
   .nav div {
     display: flex;
     flex-direction: row !important;
-    align-items: center;
+    align-items: center !important;
     max-width: 100%;
     max-height: 100%; }
     .nav div div.underline {
-      right: 0;
-      width: 7.5rem; }
+      right: 1.5rem;
+      width: 8.5rem; }
     .nav div a.brand {
       font-size: 2.6rem;
       line-height: 2.5rem; }
@@ -474,57 +476,45 @@ body {
       left: 0;
       font-size: 1.25rem;
       line-height: 3.1rem; }
+    .nav div a.home {
+      padding-right: 0 !important; }
     .nav div a {
       font-size: 1rem;
       color: #2e2e2e;
       text-align: center;
-      padding: 1.25rem 1rem; }
-      .nav div a:nth-child(2) {
-        padding-right: 0 !important; }
+      padding: 0.9rem 1.5rem; }
       .nav div a:nth-child(3):focus ~ div.underline {
         width: 9.37rem;
-        right: 7.5rem; }
+        right: 9.5rem; }
       .nav div a:nth-child(4):focus ~ div.underline {
-        right: 17rem;
-        width: 5.6rem; }
+        right: 19.8rem;
+        width: 5rem; }
       .nav div a:nth-child(5):focus ~ div.underline {
         width: 5rem;
-        right: 22rem; }
+        right: 25.5rem; }
       .nav div a:nth-child(6):focus ~ div.underline {
         width: 5rem;
-        right: 26.5rem; }
+        right: 31.25rem; }
     .nav div div {
       max-width: 40%;
       position: absolute;
       left: 1rem;
       direction: ltr; }
-      .nav div div a.btn {
-        font-size: 0.81rem;
-        color: #fff;
+      .nav div div a.btn, .nav div div a.btn-login, .nav div div .custom-container-header .slideshow-container .mySlides .header-title a, .custom-container-header .slideshow-container .mySlides .header-title .nav div div a {
         margin-right: 1rem;
-        padding: 0.62rem 1.87rem;
-        cursor: pointer;
-        border-radius: 5px;
-        background: rgba(46, 204, 113, 0.5);
-        transition: 0.3s; }
-        .nav div div a.btn i {
+        background: rgba(46, 204, 113, 0.5); }
+        .nav div div a.btn i, .nav div div a.btn-login i, .nav div div .custom-container-header .slideshow-container .mySlides .header-title a i, .custom-container-header .slideshow-container .mySlides .header-title .nav div div a i {
           margin-right: 0.5rem;
           vertical-align: -1px; }
       .nav div div a.btn-login {
-        font-size: 0.81rem;
-        color: #fff;
-        padding: 10px 16px !important;
-        cursor: pointer;
-        border-radius: 5px;
-        background: orange;
-        transition: 0.3s; }
+        text-align: center;
+        background: orange; }
         .nav div div a.btn-login:active {
           transform: scale3d(1.2, 1.2, 1.2); }
 
 @media screen and (max-width: 768px) {
   .nav div {
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column !important;
     width: 100%; }
@@ -548,3 +538,122 @@ body {
   .nav.responsive div a:not(.responsive-a):hover {
     background-color: orange;
     color: #fff; } }
+
+.custom-container-header {
+  max-height: 80vh;
+  display: flex;
+  justify-content: center; }
+  .custom-container-header .slideshow-container {
+    margin: 5% 0; }
+    .custom-container-header .slideshow-container .mySlides {
+      display: none;
+      animation: fade 1.5s; }
+
+@keyframes fade {
+  from {
+    opacity: 0.4; }
+  to {
+    opacity: 1; } }
+      .custom-container-header .slideshow-container .mySlides img {
+        border-radius: 1rem; }
+      .custom-container-header .slideshow-container .mySlides .header-title {
+        position: absolute;
+        top: 50%;
+        transform: translate(-10%, -50%);
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        flex-direction: column !important;
+        max-width: 500px;
+        max-height: 200px;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 1.25rem;
+        border-radius: 0.31rem;
+        color: #2e2e2e; }
+        .custom-container-header .slideshow-container .mySlides .header-title h1 {
+          font-size: 1.5rem;
+          font-weight: normal; }
+        .custom-container-header .slideshow-container .mySlides .header-title h3 {
+          font-size: 1.25rem;
+          font-weight: normal;
+          padding: 1rem 0; }
+        .custom-container-header .slideshow-container .mySlides .header-title a {
+          text-align: center;
+          width: 7.5rem;
+          align-self: flex-end; }
+          .custom-container-header .slideshow-container .mySlides .header-title a:active {
+            border-top-left-radius: 1rem !important;
+            border-bottom-right-radius: 1rem !important; }
+      .custom-container-header .slideshow-container .mySlides .header-detail {
+        position: absolute;
+        top: 50%;
+        color: #2e2e2e;
+        text-align: justify;
+        max-width: 300px;
+        max-height: 350px;
+        transform: translate(20%, -50%);
+        z-index: 2;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 1.25rem;
+        border-radius: 0.31rem;
+        left: 0; }
+        .custom-container-header .slideshow-container .mySlides .header-detail p {
+          padding: 0.93rem 0;
+          border-top: 1px solid #5e5d5d; }
+        .custom-container-header .slideshow-container .mySlides .header-detail h3 {
+          font-size: 1.1rem;
+          font-weight: normal;
+          margin-bottom: 0.9rem; }
+    .custom-container-header .slideshow-container .angle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      float: left;
+      width: 6.25rem;
+      margin-left: 2rem;
+      margin-top: 1.5rem; }
+      .custom-container-header .slideshow-container .angle a {
+        cursor: pointer;
+        width: 2.5rem;
+        height: 2.5rem;
+        text-align: center;
+        border-radius: 1.25rem;
+        cursor: pointer;
+        background: #fbf9f9;
+        transition: 0.3s; }
+        .custom-container-header .slideshow-container .angle a i {
+          font-size: 1.3rem;
+          color: #6f6d6d;
+          vertical-align: -10px; }
+        .custom-container-header .slideshow-container .angle a:active {
+          transform: scale3d(1.4, 1.4, 1.4); }
+
+@media screen and (max-width: 1000px) {
+  .mySlides {
+    margin: 0 1rem; }
+  .header-title {
+    margin-left: 0 !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 100%;
+    height: 100%; }
+    .header-title h1 {
+      font-size: 1.2rem !important; }
+    .header-title h3 {
+      font-size: 1rem !important; }
+    .header-title a {
+      padding: 0.35rem 0.35rem !important;
+      font-size: 0.87rem !important; }
+  .header-detail {
+    display: none; }
+  .angle {
+    width: 4.5rem !important; }
+    .angle a {
+      width: 1.8rem !important;
+      height: 1.8rem !important; }
+      .angle a i {
+        font-size: 0.9rem !important;
+        color: #6f6d6d;
+        vertical-align: -3px !important; } }
