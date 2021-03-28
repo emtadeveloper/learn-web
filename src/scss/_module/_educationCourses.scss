@@ -10,12 +10,11 @@
     margin: 0.7rem;
     cursor: pointer;
     border-radius: 0.3rem;
-    background-color: $light-gray;
+    border: 3px solid  $light-gray;
     &:active {
       border: 2px solid $orange;
     }
     h2 {
-      border-bottom: 1px solid $light-gray;
       padding: 1rem 0;
       @include font-style(1rem, rgb(39, 38, 38), normal, null, null);
     }
