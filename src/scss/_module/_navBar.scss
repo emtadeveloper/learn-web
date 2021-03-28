@@ -1,7 +1,8 @@
 @import "../tools/variables.scss";
 
 .nav {
-  background-color: $light-gray;
+  background-color: #fff;
+  border:2px solid  $light-gray;
   overflow: hidden;
   position: sticky;
   top: 0;
