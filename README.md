@@ -3,4 +3,4 @@
 
 single page web
 
-Developed with   Sass  &amp;  Pug   &amp;   Gulp   &amp;   jQuery
+Developed with   Sass  &amp;  Pug   &amp;   Gulp   &amp;   js
