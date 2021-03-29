@@ -5,107 +5,11 @@ section.container-fluid
       div(class="row container-custom-subjects")      
              h2(class="all-subjects col-xs-12 col-sm-12 col-md-12  col-l-12 col-xl-12 ") همه مطالب 
                i(class="fas fa-angle-left")
-             div(class="subjects") 
-                div 
-                  img(src="../image/react.png"  class="img-fluid", alt="")
-                  h2 آموزش React 
-                  p لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک  و برای شرایط فعلی باشد
-                  div.price
-                    h4 هزارتومن
-                    h3 54
-                  div.icon-container 
-                     i(class="far fa-star")
-                     div
-                       i(class="fas fa-shopping-cart")
-                       i(class="far fa-heart")
-             div(class="subjects") 
-                div 
-                  img(src="../image/laravel.png"  class="img-fluid", alt="")
-                  h2 آموزش laravel 
-                  p لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک  و برای شرایط فعلی باشد
-                  div.price
-                    h4 هزارتومن
-                    h3 25
-                  div.icon-container 
-                     i(class="far fa-star")
-                     div
-                       i(class="fas fa-shopping-cart")
-                       i(class="far fa-heart")
-             div(class="subjects") 
-                div 
-                  img(src="../image/javascript.png"  class="img-fluid", alt="")
-                  h2 آموزش javascript 
-                  p لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک  و برای شرایط فعلی باشد
-                  div.price
-                    h4 هزارتومن
-                    h3 95
-                  div.icon-container 
-                     i(class="far fa-star")
-                     div
-                       i(class="fas fa-shopping-cart")
-                       i(class="far fa-heart")
-             div(class="subjects") 
-                div 
-                  img(src="../image/Tailwind.png"  class="img-fluid", alt="")
-                  h2 آموزش Tailwind 
-                  p لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک  و برای شرایط فعلی باشد
-                  div.price
-                    h4 هزارتومن
-                    h3 32
-                  div.icon-container 
-                     i(class="far fa-star")
-                     div
-                       i(class="fas fa-shopping-cart")
-                       i(class="far fa-heart")             
-             div(class="subjects") 
-                div 
-                  img(src="../image/web.png"  class="img-fluid", alt="")
-                  h2 آموزش web 
-                  p لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک  و برای شرایط فعلی باشد
-                  div.price
-                    h4 هزارتومن
-                    h3 26
-                  div.icon-container 
-                     i(class="far fa-star")
-                     div
-                       i(class="fas fa-shopping-cart")
-                       i(class="far fa-heart")             
-             div(class="subjects") 
-                div 
-                  img(src="../image/Nuxt.png"  class="img-fluid", alt="")
-                  h2 آموزش Nuxt 
-                  p لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک  و برای شرایط فعلی باشد
-                  div.price
-                    h4 هزارتومن
-                    h3 45
-                  div.icon-container 
-                     i(class="far fa-star")
-                     div
-                       i(class="fas fa-shopping-cart")
-                       i(class="far fa-heart")             
-             div(class="subjects") 
-                div 
-                  img(src="../image/Flutter.png"  class="img-fluid", alt="")
-                  h2 آموزش Flutter 
-                  p لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک  و برای شرایط فعلی باشد
-                  div.price
-                    h4 هزارتومن
-                    h3 75
-                  div.icon-container 
-                     i(class="far fa-star")
-                     div
-                       i(class="fas fa-shopping-cart")
-                       i(class="far fa-heart")             
-             div(class="subjects") 
-              div 
-                img(src="../image/linux.png"  class="img-fluid", alt="")
-                h2 آموزش linux 
-                p لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک  و برای شرایط فعلی باشد
-                div.price
-                   h4 هزارتومن
-                   h3 26
-                div.icon-container 
-                   i(class="far fa-star")
-                   div
-                      i(class="fas fa-shopping-cart")
-                      i(class="far fa-heart")             
+             +card-cources("../image/react.png","آموزش React","لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک  و برای شرایط فعلی باشد","54")  
+             +card-cources("../image/laravel.png","آموزش laravel","لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک  و برای شرایط فعلی باشد","25")  
+             +card-cources("../image/javascript.png","آموزش javascript ","لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک  و برای شرایط فعلی باشد","76")  
+             +card-cources("../image/Tailwind.png","آموزش Tailwind","لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک  و برای شرایط فعلی باشد","12")  
+             +card-cources("../image/web.png","آموزش web","لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک  و برای شرایط فعلی باشد","589")  
+             +card-cources("../image/Nuxt.png","آموزش Nuxt","لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک  و برای شرایط فعلی باشد","23")  
+             +card-cources("../image/Flutter.png","آموزش Flutter","لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک  و برای شرایط فعلی باشد","98")  
+             +card-cources("../image/linux.png","آموزش linux","لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک  و برای شرایط فعلی باشد","45")  

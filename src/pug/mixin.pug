@@ -3,3 +3,18 @@ mixin title (value)
        span 
        h6=value
        span
+
+mixin card-cources(img,title,parageaph,price)
+    div(class="subjects") 
+                div 
+                  img(src=img  class="img-fluid", alt="")
+                  h2=title
+                  p=parageaph
+                  div.price
+                    h4 هزارتومن
+                    h3=price
+                  div.icon-container 
+                     i(class="far fa-star")
+                     div
+                       i(class="fas fa-shopping-cart")
+                       i(class="far fa-heart")
