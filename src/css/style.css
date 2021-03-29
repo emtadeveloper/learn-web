@@ -460,27 +460,27 @@ body {
 
 .scrolltop {
   position: fixed;
-  right: 2rem;
+  right: 1rem;
   bottom: -20%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   background: orange;
-  border-radius: 30px;
+  border-radius: 20px;
   z-index: 1000;
   transition: 0.4s;
   visibility: hidden; }
   .scrolltop:hover {
     background-color: orangered; }
   .scrolltop .scrolltop__icon {
-    font-size: 1.8rem;
+    font-size: 1rem;
     color: white; }
 
 .show-scroll {
   visibility: visible;
-  bottom: 2rem; }
+  bottom: 1rem; }
 
 .nav {
   background-color: #fff;
@@ -588,9 +588,10 @@ body {
       .custom-container-header .slideshow-container .mySlides img {
         border-radius: 1rem; }
       .custom-container-header .slideshow-container .mySlides .header-title {
-        position: absolute;
-        top: 50%;
-        transform: translate(-10%, -50%);
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
         z-index: 2;
         display: flex;
         justify-content: center;
@@ -615,26 +616,6 @@ body {
           .custom-container-header .slideshow-container .mySlides .header-title a:active {
             border-top-left-radius: 1rem !important;
             border-bottom-right-radius: 1rem !important; }
-      .custom-container-header .slideshow-container .mySlides .header-detail {
-        position: absolute;
-        top: 50%;
-        color: #2e2e2e;
-        text-align: justify;
-        max-width: 300px;
-        max-height: 350px;
-        transform: translate(20%, -50%);
-        z-index: 2;
-        background-color: rgba(255, 255, 255, 0.9);
-        padding: 1.25rem;
-        border-radius: 0.31rem;
-        left: 0; }
-        .custom-container-header .slideshow-container .mySlides .header-detail p {
-          padding: 0.93rem 0;
-          border-top: 1px solid #5e5d5d; }
-        .custom-container-header .slideshow-container .mySlides .header-detail h3 {
-          font-size: 1.1rem;
-          font-weight: normal;
-          margin-bottom: 0.9rem; }
     .custom-container-header .slideshow-container .angle {
       display: flex;
       align-items: center;
@@ -664,10 +645,6 @@ body {
     margin: 0 1rem; }
   .header-title {
     margin-left: 0 !important;
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
     width: 100%;
     height: 100%; }
     .header-title h1 {

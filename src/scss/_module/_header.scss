@@ -19,8 +19,7 @@
         border-radius: 1rem;
       }
       .header-title {
-        @include abs-position(50%, null, null, null);
-        transform: translate(-10%, -50%);
+        @include center-vertically;
         z-index: 2;
         @include flex-center-column;
         @include max-box(500px, 200px);
@@ -46,25 +45,7 @@
           }
         }
       }
-      .header-detail {
-        @include abs-position(50%, null, null, null);
-        @include font-style(null, $color-dark-text, null, justify, null);
-        @include max-box(300px, 350px);
-        transform: translate(20%, -50%);
-        z-index: 2;
-        background-color: rgba(255, 255, 255, 0.9);
-        padding: 1.25rem;
-        border-radius: 0.31rem;
-        left: 0;
-        p {
-          padding: 0.93rem 0;
-          border-top: 1px solid #5e5d5d;
-        }
-        h3 {
-          @include font-style(1.1rem, null, normal, null, null);
-          margin-bottom: 0.9rem;
-        }
-      }
+
     }
     .angle {
       @include flex-space-between;
@@ -97,7 +78,6 @@
   }
   .header-title {
     margin-left: 0 !important;
-    @include center-vertically;
     @include full-box(100%, 100%);
     h1 {
       font-size: 1.2rem !important;

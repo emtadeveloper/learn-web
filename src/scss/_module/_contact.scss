@@ -62,15 +62,15 @@
 
 .scrolltop {
   position: fixed;
-  right:2rem;
+  right:1rem;
   bottom: -20%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width:60px;
-  height:60px;
+  width:40px;
+  height:40px;
   background: $orange;
-  border-radius:30px;
+  border-radius:20px;
   z-index: 1000;
   transition: 0.4s;
   visibility: hidden;
@@ -78,11 +78,11 @@
     background-color: orangered;
   }
   .scrolltop__icon {
-    font-size: 1.8rem;
+    font-size: 1rem;
     color: white;
   }
 }
 .show-scroll {
   visibility: visible;
-  bottom:2rem;
+  bottom:1rem;
 }
