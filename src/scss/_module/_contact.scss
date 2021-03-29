@@ -27,7 +27,7 @@
       width: 2.5rem;
     }
     a {
-      @include font-style(null, $color-light-text, null, center,null);
+      @include font-style(null, $color-light-text, null, center, null);
       width: 2.5rem;
       &:nth-child(1) {
         margin-left: $margin-right-left-container;
@@ -57,3 +57,32 @@
 }
 
 // contact style ==========================
+
+// scroll top =============================
+
+.scrolltop {
+  position: fixed;
+  right:2rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:60px;
+  height:60px;
+  background: $orange;
+  border-radius:30px;
+  z-index: 1000;
+  transition: 0.4s;
+  visibility: hidden;
+  &:hover {
+    background-color: orangered;
+  }
+  .scrolltop__icon {
+    font-size: 1.8rem;
+    color: white;
+  }
+}
+.show-scroll {
+  visibility: visible;
+  bottom:2rem;
+}

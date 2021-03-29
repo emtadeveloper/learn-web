@@ -458,6 +458,30 @@ body {
         display: inline-block;
         left: 11rem; }
 
+.scrolltop {
+  position: fixed;
+  right: 2rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: orange;
+  border-radius: 30px;
+  z-index: 1000;
+  transition: 0.4s;
+  visibility: hidden; }
+  .scrolltop:hover {
+    background-color: orangered; }
+  .scrolltop .scrolltop__icon {
+    font-size: 1.8rem;
+    color: white; }
+
+.show-scroll {
+  visibility: visible;
+  bottom: 2rem; }
+
 .nav {
   background-color: #fff;
   border: 2px solid #fbf9f9;

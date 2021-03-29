@@ -10,6 +10,8 @@ html(lang="fa")
         link(rel="stylesheet", href="../css/style.css")
         title learn-web
     body
+        a(href="#" class="scrolltop" id="scroll-top")
+         i(class="fas fa-angle-up scrolltop__icon")
         include _module/_contact.pug 
         include _module/_navBar.pug 
         include _module/_header.pug 
@@ -19,9 +21,10 @@ html(lang="fa")
         include _module/_aboutMe.pug 
         include _module/_team.pug 
         include _module/_footer.pug 
-    script(src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js")    
     script(src="../js/index.js")
     script  VanillaCounter()
+    script  window.addEventListener("scroll", scrollTop);
+    
             
 
 
