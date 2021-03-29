@@ -1,0 +1,128 @@
+@import "./variables.scss";
+
+.container-fluid {
+  width: 100%;
+}
+.clear {
+  clear: both;
+}
+.container {
+  clear: both;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+[class^="col-"] {
+  float: right;
+}
+// xs
+@media screen and(max-width:$xs-width) {
+  $xs-class-slug: col-xs;
+  $xs-class-offset: col-xs-offset;
+  .xs-hidden {
+    display: none!important;
+  }
+  .xs-visible {
+    display: inline-block!important;
+  }
+  @for $i from 1 through 12 {
+    .#{$xs-class-slug}-#{$i} {
+      width: 8.333333% * $i!important;
+    }
+  }
+  @for $i from 1 through 12 {
+    .#{$xs-class-offset}-#{$i} {
+      margin-right: 8.333333% * $i!important;
+    }
+  }
+}
+// sm
+@media screen and(min-width:$sm-width) {
+  $sm-class-slug: col-sm;
+  $sm-class-offset: col-sm-offset;
+  .sm-hidden {
+    display: none!important;
+  }
+  .sm-visible {
+    display: inline-block!important;
+  }
+  @for $i from 1 through 12 {
+    .#{$sm-class-slug}-#{$i} {
+      width: 8.333333% * $i!important;
+    }
+  }
+  @for $i from 1 through 12 {
+    .#{$sm-class-offset}-#{$i} {
+      margin-right: 8.333333% * $i!important;
+    }
+  }
+}
+// md
+@media screen and(min-width:$md-width) {
+  .md-visible {
+    display: inline-block!important;
+  }
+  .md-hidden {
+    display: none!important;
+  }
+  $md-class-slug: col-md;
+  $md-class-offset: col-md-offset;
+
+  @for $i from 1 through 12 {
+    .#{$md-class-slug}-#{$i} {
+      width: 8.333333% * $i!important;
+    }
+  }
+  @for $i from 1 through 12 {
+    .#{$md-class-offset}-#{$i} {
+      margin-right: 8.333333% * $i !important;
+    }
+  }
+}
+// l
+@media screen and(min-width:$l-width) {
+  .l-hidden {
+    display: none!important;
+  }
+  .l-visible {
+    display: inline-block!important;
+  }
+  $l-class-slug: col-l;
+  $l-class-offset: col-l-offset;
+  @for $i from 1 through 12 {
+    .#{$l-class-slug}-#{$i} {
+      width: 8.333333% * $i !important;
+    }
+  }
+  @for $i from 1 through 12 {
+    .#{$l-class-offset}-#{$i} {
+      margin-right: 8.333333% * $i !important;
+    }
+  }
+}
+// xl
+@media screen and(min-width:$xl-width) {
+  .xl-hidden {
+    display: none!important;
+  }
+  .xl-visible {
+    display: inline-block!important;
+  }
+  $xl-class-slug: col-xl;
+  $xl-class-offset: col-xl-offset;
+  @for $i from 1 through 12 {
+    .#{$xl-class-slug}-#{$i} {
+      width: 8.333333% * $i !important;
+    }
+  }
+  @for $i from 1 through 12 {
+    .#{$xl-class-offset}-#{$i} {
+      margin-right: 8.333333% * $i !important;
+    }
+  }
+}

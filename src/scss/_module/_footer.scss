@@ -1,0 +1,129 @@
+@import "../tools/variables.scss";
+@import "../tools/mixins.scss";
+
+section.wrapper {
+  position: relative;
+  @include min-box(100%, 15rem);
+  background-color: $fluid-custom-color;
+  .footer-wrapper {
+    .desc {
+      padding: 15px;
+      color: #9c9898;
+      a {
+        @include font-style(1rem, $color-light-text, null, null, null);
+        i {
+          @include font-style(2.2rem, $orange, null, null, null);
+          transform: rotate(-18deg);
+          margin-left: 20px;
+          vertical-align: -5px;
+        }
+      }
+      ul {
+        padding-top: 14px;
+        margin-top: 15px;
+        border-top: 1px solid $orange;
+        li {
+          transition: 0.2s;
+          cursor: pointer;
+          i {
+            color: $orange;
+          }
+          span {
+            padding-right: 0.5rem;
+            font-size: 12px;
+          }
+          &:hover {
+            transform: translate(-10px);
+            color: $orange;
+          }
+        }
+      }
+      p {
+        @include font-style(14px, null, null, justify, null);
+        padding-top: 15px;
+      }
+      div.input-field {
+        margin-top: $margin-right-left-container;
+        input {
+          width: 75%;
+          outline: 0;
+          border: 0;
+          border-radius: 5px;
+          padding: 8px 16px;
+          background: $color-light-text;
+          text-align: right;
+          font-size: 12px;
+        }
+        a {
+          @include font-style(0.8rem, $color-light-text, null, null, null);
+          padding: 8px 25px;
+          cursor: pointer;
+          border-radius: 5px;
+          background: $orange;
+          transition: 0.3s;
+          float: left;
+          &:active {
+            transform: scale3d(1.2, 1.2, 1.2);
+          }
+        }
+      }
+    }
+    .copy-right {
+      border-top: 1px solid #888686;
+      @include font-style(12px, #9c9898, null, center, null);
+      padding: 10px;
+      margin-top: 20px;
+    }
+  }
+  .circle-container {
+    position: relative;
+    @include full-box(100%, 310px);
+    overflow: hidden;
+    .circle {
+      @include full-box(140%, 370px);
+      transform: translate(17%, -24%);
+      border-radius: 100%;
+      background-color: #fff;
+    }
+  }
+  .news {
+    @include max-box(var(--news-width), var(--news-height));
+    @include abs-position(29%, null, null, 50%);
+    @include font-style(null, $color-dark-text, bolder, justify, null);
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 2rem;
+    border: 0.5px solid var(--box-shadow-color);
+    h2 {
+      @include font-style(null, $color-dark-text, normal, center, null);
+      background-color: #fff;
+    }
+    p {
+      @include font-style(.9rem, $color-dark-text, normal, center, null);
+      margin: 20px 0;
+      background-color: #fff;
+    }
+    a {
+      @include font-style(.85rem,  $color-light-text, normal, null, null);
+      padding: 10px 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      background: $orange;
+      transition: 0.3s;
+      float: left;
+      &:active {
+        transform: scale3d(1.2, 1.2, 1.2);
+      }
+    }
+    input {
+      width: 80%;
+      outline: 0;
+      border: 0;
+      border-radius: 5px;
+      padding: 10px 16px;
+      background: $gray;
+      @include font-style(.85rem,null, null, right, null);
+    }
+  }
+}

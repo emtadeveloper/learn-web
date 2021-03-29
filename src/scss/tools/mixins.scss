@@ -1,0 +1,122 @@
+//flex box ==================================
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center-vert {
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+}
+@mixin flex-center-horiz {
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+@mixin flex-center-column {
+  display: flex;
+  justify-content: center;
+  flex-direction: column !important;
+}
+
+@mixin flex-center-vert {
+  display: flex;
+  flex-direction: row !important;
+  align-items: center !important;
+}
+
+@mixin flex-center-horiz {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-space-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin flex-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// ==============================================
+
+// margin-padding ===============================
+
+@mixin margin-padding($margin-padding, $top, $right, $bottom, $left) {
+  @if $margin-padding {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+  } @else {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+  }
+}
+
+// ==============================================
+
+// fonts and  styles ============================
+
+@mixin font-style(
+  $fontSize,
+  $fontColor,
+  $fontWeight,
+  $text-align,
+  $lineheight
+) {
+  font-size: $fontSize;
+  color: $fontColor;
+  font-weight: $fontWeight;
+  text-align: $text-align;
+  line-height: $lineheight;
+}
+
+// ==============================================
+
+// box and position =============================
+
+@mixin abs-position($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin center-vertically {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+// ==============================================
+
+// box  =========================================
+
+@mixin full-box($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin max-box($width, $height) {
+  max-width: $width;
+  max-height: $height;
+}
+@mixin min-box($width, $height) {
+  min-width: $width;
+  min-height: $height;
+}
+
+// ==============================================

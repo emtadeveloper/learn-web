@@ -1,0 +1,31 @@
+doctype html
+html(lang="fa")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+             integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous")        
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css")
+        link(rel="stylesheet", href="../css/style.css")
+        title learn-web
+    body
+        a(href="#" class="scrolltop" id="scroll-top")
+         i(class="fas fa-angle-up scrolltop__icon")
+        include _module/_contact.pug 
+        include _module/_navBar.pug 
+        include _module/_header.pug 
+        include _module/_cray.pug 
+        include _module/_counter.pug 
+        include _module/_educationCourses.pug 
+        include _module/_aboutMe.pug 
+        include _module/_team.pug 
+        include _module/_footer.pug 
+    script(src="../js/index.js")
+    script  VanillaCounter()
+    script  window.addEventListener("scroll", scrollTop);
+    
+            
+
+
+

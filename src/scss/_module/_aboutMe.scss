@@ -1,0 +1,32 @@
+.container-custom-aboutMe {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .about-me {
+    padding: 1.87rem;
+    h3 {
+      border-bottom: 1px solid $light-gray;
+      padding-bottom: 1.1rem;
+      @include font-style(1.4rem, rgb(39, 38, 38), normal, null,null);
+    }
+    p {
+      padding: 26px;
+      line-height: 32px;
+      @include font-style(1rem, $color-dark-text, null, justify,null);
+    }
+    a {
+      background-color: $orange;
+      padding: 0.31rem 0.62rem;
+      border-radius: 3px;
+      @include font-style(1rem, $color-light-text, null, null,null);
+      float: left;
+      margin-left: 1.87rem;
+      transition: 0.5s ease;
+      &:hover {
+        border-top-left-radius: 1.25rem;
+        border-bottom-right-radius: 1.25rem;
+      }
+    }
+  }
+}

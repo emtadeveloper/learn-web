@@ -1,0 +1,88 @@
+@import "../tools/variables.scss";
+@import "./tools/mixins.scss";
+@import "./tools/utilities.scss";
+
+// contact style ==========================
+
+.container-fluid-custom {
+  background-color: $fluid-custom-color;
+  .contact {
+    @include flex-center-vert;
+    height: $height-contact;
+    a {
+      margin-right: $margin-right-left-container;
+      color: $color-light-text;
+    }
+    i {
+      color: $orange;
+      @include margin-padding(true, null, 0.7rem, null, 2rem);
+    }
+  }
+  .social-media {
+    direction: ltr;
+    @include flex-center-vert;
+    height: $height-contact;
+    div.underline {
+      @extend .hover-focus-underline;
+      width: 2.5rem;
+    }
+    a {
+      @include font-style(null, $color-light-text, null, center, null);
+      width: 2.5rem;
+      &:nth-child(1) {
+        margin-left: $margin-right-left-container;
+      }
+      &:nth-child(1):hover ~ div.underline {
+        display: inline-block;
+        left: 1rem;
+      }
+      &:nth-child(2):hover ~ div.underline {
+        display: inline-block;
+        left: 3.5rem;
+      }
+      &:nth-child(3):hover ~ div.underline {
+        display: inline-block;
+        left: 6rem;
+      }
+      &:nth-child(4):hover ~ div.underline {
+        display: inline-block;
+        left: 8.5rem;
+      }
+      &:nth-child(5):hover ~ div.underline {
+        display: inline-block;
+        left: 11rem;
+      }
+    }
+  }
+}
+
+// contact style ==========================
+
+// scroll top =============================
+
+.scrolltop {
+  position: fixed;
+  right:1rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:40px;
+  height:40px;
+  background: $orange;
+  border-radius:20px;
+  z-index: 1000;
+  transition: 0.4s;
+  visibility: hidden;
+  &:hover {
+    background-color: orangered;
+  }
+  .scrolltop__icon {
+    font-size: 1rem;
+    color: white;
+  }
+}
+.show-scroll {
+  visibility: visible;
+  bottom:1rem;
+}

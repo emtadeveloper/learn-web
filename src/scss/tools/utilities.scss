@@ -1,0 +1,49 @@
+// border for hover and foucs for _navBar and _contact
+@import "./variables.scss";
+
+.hover-focus-underline {
+  @include abs-position(null, null, 0, 0);
+  background-color: orange;
+  display: none;
+  height: 0.17rem;
+  transition: 0.5s;
+}
+//=====================================================
+
+.img-fluid {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.btn {
+  @include font-style(0.8rem, $color-light-text, null, null, null);
+  background-color: $orange;
+  padding: 0.55rem 0.75rem;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.none {
+  display: none;
+}
+
+.title-container {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h6 {
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    font-weight: normal;
+  }
+  span {
+    width:60px;
+    height: 3px;
+    background-color: $orange;
+  }
+}

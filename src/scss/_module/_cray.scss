@@ -1,0 +1,59 @@
+@import "../tools/mixins.scss";
+.container-custom-cary {
+  @include full-box(null, 50vh);
+  @include flex-center-horiz;
+  align-items: center;
+  background-image: url("../image/faq-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  section {
+    @include flex-column;
+    width: 100%;
+    align-items: center;
+    h3 {
+      @include font-style(1.5rem, null, normal, null, null);
+      margin-bottom: 3rem;
+    }
+    .input-field-search {
+      @include full-box(50%, 3.8rem);
+      display: flex;
+      align-items: center;
+      background-color: $input-color;
+      border-radius: 100px;
+      input {
+        outline: 0;
+        border: 0;
+        background-color: $input-color;
+        width: 90%;
+        padding-right: 50px;
+        text-align: right;
+        font-size: 1rem;
+      }
+      i {
+        width: 10%;
+        text-align: center;
+        cursor: pointer;
+        color: $icon-color;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  section {
+    h3 {
+      text-align: center;
+      font-size: 1.2rem !important;
+    }
+    .input-field-search {
+      width: 90% !important;
+      input {
+        width: 85% !important;
+        padding-right: 25px !important;
+      }
+      i {
+        width: 15% !important;
+      }
+    }
+  }
+}

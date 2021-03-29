@@ -1,0 +1,106 @@
+.custom-container-header {
+  @include max-box(null,100vh);
+  @include flex-center-horiz;
+  z-index: 999;
+  .slideshow-container {
+    margin: 5% 0;
+    .mySlides {
+      display: none;
+      animation: fade 1.5s;
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      img {
+        border-radius: 1rem;
+      }
+      .header-title {
+        @include center-vertically;
+        z-index: 2;
+        @include flex-center-column;
+        @include max-box(500px, 200px);
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 1.25rem;
+        border-radius: 0.31rem;
+        color: $color-dark-text;
+        h1 {
+          @include font-style(1.5rem, null, normal, null, null);
+        }
+        h3 {
+          @include font-style(1.25rem, null, normal, null, null);
+          padding: 1rem 0;
+        }
+        a {
+          @extend .btn;
+          text-align: center;
+          width: 7.5rem;
+          align-self: flex-end;
+          &:active {
+            border-top-left-radius: 1rem !important;
+            border-bottom-right-radius: 1rem !important;
+          }
+        }
+      }
+
+    }
+    .angle {
+      @include flex-space-between;
+      float: left;
+      width: 6.25rem;
+      margin-left: 2rem;
+      margin: 1.5rem  2rem;
+      a {
+        cursor: pointer;
+        @include full-box(2.5rem, 2.5rem);
+        text-align: center;
+        border-radius: 1.25rem;
+        cursor: pointer;
+        background: $light-gray;
+        transition: 0.3s;
+        i {
+          @include font-style(1.3rem, #6f6d6d, null, null, null);
+          vertical-align: -10px;
+        }
+        &:active {
+          transform: scale3d(1.4, 1.4, 1.4);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .mySlides {
+    margin: 0 1rem;
+  }
+  .header-title {
+    margin-left: 0 !important;
+    @include full-box(100%, 100%);
+    h1 {
+      font-size: 1.2rem !important;
+    }
+    h3 {
+      font-size: 1rem !important;
+    }
+    a {
+      padding: 0.35rem 0.35rem !important;
+      font-size: 0.87rem !important;
+    }
+  }
+  .header-detail {
+    display: none;
+  }
+  .angle {
+    width: 4.5rem !important;
+    a {
+      @include full-box(1.8rem !important, 1.8rem !important);
+      i {
+        @include font-style(.9rem!important, #6f6d6d, null, null, null);
+        vertical-align: -3px !important;
+      }
+    }
+  }
+}
